@@ -71,28 +71,38 @@ export const InputTitle = styled.div`
 
 export const checkBtn = styled.button`
     font-size: 10px;
-    background-color: #628d81;
     color: #f2f2f2;
-    width: 80px;
-    height: 26px;
+    width: 78px;
+    height: 23px;
     border: 1px solid #734838;
-    line-height: 23px;
+    line-height: 22px;
     float: right;
     margin-right: 2%;
-    border-radius: 10px;
+    border-radius: 5px;
 
     &:hover {
         cursor: pointer;
-        background-color: #f2f2f2;
-        color: #734838;
-        font-weight: bolder;
+        color: #f2f2f2;
         line-height: 21px;
-        border: 2px solid #734838;
+        /* border: 2px solid #734838; */
+    }
+
+    &.checked {
+        background-color: #628d81;
+    }
+
+    &.not-checked {
+        border: 1px solid #f25430;
+        background-color: #f2f2f2;
+        color: #f25430;
+        font-size: 11px;
+        font-weight: bolder;
     }
 `
 
 export const InputText = styled.input`
     font-size: 15px;
+    margin-bottom: 5px;
     &::placeholder {
         font-size: 13px;
     }
@@ -138,6 +148,6 @@ export const LogoBox = styled.div`
     justify-content: space-around;
     
     .kakaologo {
-        height: 40px;
+        height: 41px;
     }
 `

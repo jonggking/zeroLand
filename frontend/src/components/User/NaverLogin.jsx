@@ -11,7 +11,7 @@ const NaverLogin = () => {
 			callbackUrl: "http://127.0.0.1:5173/",
           // 팝업창으로 로그인을 진행할 건지?           
 			isPopup: false,
-			loginButton: { color: 'green', type: 1, height: 40 },
+			loginButton: { color: 'white', type: 1, height: 45, width: 45 },
 			callbackHandle: true,
 		});
 		naverLogin.init();

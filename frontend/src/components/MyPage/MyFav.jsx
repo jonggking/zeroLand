@@ -12,8 +12,6 @@ function MyFav( ) {
       <h3 className="text-secondary">My Fav</h3>
       <StoreCard />
       <StoreCard />
-      <StoreCard />
-      <StoreCard />
     </>
     
   )

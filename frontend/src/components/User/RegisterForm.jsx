@@ -4,7 +4,7 @@ import * as ResisterStyled from "../StyledComponents/SignStyled";
 import NaverLogin from "./NaverLogin";
 import { KaKaoButton } from "./KakaoLogin";
 import CheckModal from "./CheckModal";
-import * as api from "../../utils/Api";
+import * as Api from "../../utils/Api";
 
 
 function RegisterForm () {
@@ -52,12 +52,12 @@ function RegisterForm () {
     e.preventDefault();
 
     try {
-      const apiResult = await api.post("user/register", {
+      const apiResult = await Api.post("user/register", {
         email, 
         password, 
         nickname,
       });
-      // console.log(apiResult.data);
+      console.log(apiResult.data);
 
       const { result } = apiResult.data;
       
@@ -73,7 +73,7 @@ function RegisterForm () {
     e.preventDefault();
 
     try { 
-      const res = await api.post("user/register/email", {email});
+      const res = await Api.post("user/register/email", {email});
 
       const { result } = res.data;
 
@@ -94,7 +94,7 @@ function RegisterForm () {
     e.preventDefault();
 
     try { 
-      const res = await api.post("user/register/nickname", {nickname});
+      const res = await Api.post("user/register/nickname", {nickname});
 
       const { result } = res.data;
 
@@ -177,7 +177,7 @@ function RegisterForm () {
         <ResisterStyled.InputBox>
         <ResisterStyled.FormTitle>회원가입</ResisterStyled.FormTitle>
 
-        <ResisterStyled.checkBtn onClick={onCheckEmail}>중복 확인 *</ResisterStyled.checkBtn>
+        <ResisterStyled.checkBtn className={checkMail? 'checked' : 'not-checked'} onClick={onCheckEmail}>중복 확인*</ResisterStyled.checkBtn>
         
         <ResisterStyled.InputTitle>이메일 주소 *</ResisterStyled.InputTitle>
             <ResisterStyled.InputText 
@@ -204,7 +204,7 @@ function RegisterForm () {
                 onChange={onChangeConfirmPwd}/>
                 <ResisterStyled.OutputText className={isConfirmPwd ? 'success' : 'error'}>{confirmPwdMsg}</ResisterStyled.OutputText>
 
-                <ResisterStyled.checkBtn onClick={onCheckNickname}>중복 확인 *</ResisterStyled.checkBtn>
+                <ResisterStyled.checkBtn onClick={onCheckNickname} className={checkNickname? 'checked' : 'not-checked'}>중복 확인*</ResisterStyled.checkBtn>
 
         <ResisterStyled.InputTitle>닉네임 *</ResisterStyled.InputTitle>
             <ResisterStyled.InputText 
@@ -222,10 +222,10 @@ function RegisterForm () {
           </ResisterStyled.FootButton>
         </ResisterStyled.FootBtnBox>
 
-        <ResisterStyled.LogoBox>
+        {/* <ResisterStyled.LogoBox>
           <NaverLogin /> 
           <KaKaoButton />
-        </ResisterStyled.LogoBox>
+        </ResisterStyled.LogoBox> */}
 
         </ResisterStyled.InputBox>
     </ResisterStyled.FormBox>
