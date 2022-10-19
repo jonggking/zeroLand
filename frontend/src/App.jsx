@@ -15,7 +15,7 @@ import { ErrorBoundary } from "react-error-boundary";
 import UiErrorFallback from "./components/Common/UiErrorFallback";
 
 import LayOut from "./components/Common/Layout";
-import * as api from "./utils/Api";
+import * as Api from "./utils/Api";
 import { loginReducer } from "./utils/reducer";
 
 export const UserStateContext = createContext(null);
@@ -51,7 +51,7 @@ function App() {
 
   const fetchCurrentUser = async() => {
     try {
-      const res = await api.get("user");
+      const res = await Api.get("user");
       const currentUser = res.data;
 
       dispatch({

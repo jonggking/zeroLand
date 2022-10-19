@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import * as LoginStyled from "../StyledComponents/SignStyled";
 import { KaKaoButton } from "./KakaoLogin";
 import NaverLogin from "./NaverLogin";
-import * as api from "../../utils/Api";
+import * as Api from "../../utils/Api";
 import { DispatchContext } from "../../App";
 
 
@@ -43,7 +43,7 @@ function LoginForm () {
         e.preventDefault();
 
       try {
-        const res = await api.post("user/login", {
+        const res = await Api.post("user/login", {
           email, 
           password,
         })
@@ -129,6 +129,7 @@ function LoginForm () {
                     </LoginStyled.FootButton></a>
                 </LoginStyled.FootBtnBox>
 
+                <div style={{margin:"5px", fontSize: "15px"}}>— 간편 로그인 —</div>
                 <LoginStyled.LogoBox>
                   <NaverLogin /> 
                   <KaKaoButton />
