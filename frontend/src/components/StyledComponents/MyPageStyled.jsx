@@ -61,15 +61,23 @@ export const ProfileBox = styled.div`
     border: 1px solid black;
     width: 100%;
     height: 170px;
+    flex-wrap: wrap;
 `
 
 export const ProfilePhoto = styled.div`
-    display: flex;
     width: 120px;
     height: 120px;
     border-radius: 50%;
     border: 1px solid black;
-    margin: 20px;
+    margin: 22px;
+    margin-left: 50px;
+`
+
+export const ProfileIntro = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 150px;
 `
 
 export const ProfileEmail = styled.div`
@@ -77,13 +85,14 @@ export const ProfileEmail = styled.div`
     height: 30px;
     border: 1px solid black;
     color: #01402E;
-    margin: 10px;
+    margin-left: 10px;
     margin-top: 40px;
 `
 
 export const ProfileMyInfo = styled.div`
-    width: 200px;
+    width: 270px;
     height: 30px;
     border: 1px solid black;
     color: #01402E;
+    margin-left: 10px;
 `

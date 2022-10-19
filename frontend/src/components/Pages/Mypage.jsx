@@ -22,8 +22,10 @@ function Mypage() {
           <MyPageBox.ContentBox>
             <MyPageBox.ProfileBox>
               <MyPageBox.ProfilePhoto></MyPageBox.ProfilePhoto>
-              <MyPageBox.ProfileEmail>이메일 주소 들어가는 칸</MyPageBox.ProfileEmail>
-              <MyPageBox.ProfileMyInfo>내 소개 들어가는 칸</MyPageBox.ProfileMyInfo>
+              <MyPageBox.ProfileIntro>
+                  <MyPageBox.ProfileEmail>이메일 주소 들어가는 칸</MyPageBox.ProfileEmail>
+                  <MyPageBox.ProfileMyInfo>내 소개 들어가는 칸</MyPageBox.ProfileMyInfo>
+              </MyPageBox.ProfileIntro>
             </MyPageBox.ProfileBox>
           </MyPageBox.ContentBox>
         </MyPageBox.PageContainer>
