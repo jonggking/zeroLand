@@ -135,7 +135,7 @@ export const FootButton = styled.button`
     width: 200px;
     height: 45px;
     line-height: 45px;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
     font-size: 15px;
     &:hover {
         background-color: #01402E;
@@ -148,6 +148,7 @@ export const LogoBox = styled.div`
     justify-content: space-around;
     
     .kakaologo {
-        height: 41px;
+        height: 45px;
+        width: 45px;
     }
 `

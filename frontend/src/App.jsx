@@ -46,8 +46,8 @@ function App() {
   const [userState, dispatch] = useReducer(loginReducer, {
     user: null,
   });
-
   const [isFetchCompleted, setIsFetchCompleted] = useState(false);
+  const [code, setCode] = useState("")
 
   const fetchCurrentUser = async() => {
     try {
@@ -70,6 +70,28 @@ function App() {
   useEffect(() => {
     fetchCurrentUser();
   }, []);
+
+
+  const Kakao = async (_code) => {
+      if (!_code) return;
+      const res = await Api.post("kakaoReqToken", {code: _code});
+      console.log(res); 
+  };
+
+  const getSsoCode = () => {
+      const params = new URL(window.location.href).searchParams;
+      const _code = params.get("code");
+      if (!code) {
+          Kakao(_code);
+      }
+      setCode(_code);
+  }
+
+  useEffect(()=> {
+      getSsoCode();
+  }, [])
+
+  // 카카오 dispatch 해서 
 
   if (!isFetchCompleted) {
     return "loading..."

@@ -129,7 +129,7 @@ function LoginForm () {
                     </LoginStyled.FootButton></a>
                 </LoginStyled.FootBtnBox>
 
-                <div style={{margin:"5px", fontSize: "15px"}}>— 간편 로그인 —</div>
+                <div style={{fontSize: "15px"}}>— 간편 로그인 —</div>
                 <LoginStyled.LogoBox>
                   <NaverLogin /> 
                   <KaKaoButton />
