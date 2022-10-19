@@ -66,15 +66,10 @@ function App() {
     setIsFetchCompleted(true);
   }
 
-  // 이 다음에!!! useEffect 사용!!!
-  useEffect(() => {
-    fetchCurrentUser();
-  }, []);
-
 
   const Kakao = async (_code) => {
       if (!_code) return;
-      const res = await Api.post("kakaoReqToken", {code: _code});
+      const res = await Api.post("kakaoSignin", {code: _code});
       console.log(res); 
   };
 
@@ -92,6 +87,12 @@ function App() {
   }, [])
 
   // 카카오 dispatch 해서 
+
+
+  // 이 다음에!!! useEffect 사용!!!
+  useEffect(() => {
+    fetchCurrentUser();
+  }, []);
 
   if (!isFetchCompleted) {
     return "loading..."

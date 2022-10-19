@@ -222,10 +222,10 @@ function RegisterForm () {
           </ResisterStyled.FootButton>
         </ResisterStyled.FootBtnBox>
 
-        {/* <ResisterStyled.LogoBox>
+        <ResisterStyled.LogoBox>
           <NaverLogin /> 
           <KaKaoButton />
-        </ResisterStyled.LogoBox> */}
+        </ResisterStyled.LogoBox>
 
         </ResisterStyled.InputBox>
     </ResisterStyled.FormBox>
