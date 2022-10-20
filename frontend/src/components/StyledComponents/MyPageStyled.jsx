@@ -20,7 +20,7 @@ export const PageContainer = styled.div`
     height: 70vh;
     background-color: #f2f2f2;
     border-radius: 35px;
-    max-width: 900px;
+    max-width: 898px;
 `
 
 export const Menubox = styled.div`
@@ -35,32 +35,42 @@ export const Menubox = styled.div`
 export const Menus = styled.div`
     display: flex;
     border: 1px solid #01402E;
-    border-radius: 20px;
+    border-radius: 10px;
     width: 100%;
-    height: 80px;
+    height: 60px;
     color: #01402E;
     font-size: 20px;
     justify-content: center;
-    line-height: 80px;
+    line-height: 60px;
     letter-spacing: 3px;
     margin: 5px;
     cursor: pointer;
+
+    &:first-child {
+        margin-top: 10px;
+        border: none;
+        font-size: 23px;
+        font-weight: bolder;
+        border-bottom: 3px solid #01402E;
+    }
 `
 
 export const ContentBox = styled.div`
     display: flex;
+    flex-direction: column;
     width: 45vw;
     height: 69vh;
     border: 1px solid black;
-    max-width: 600px;
+    max-width: 630px;
+    border-radius: 30px;
 `
 
 export const ProfileBox = styled.div`
     display: grid;
     grid-template-columns: 1fr 2fr;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     width: 100%;
-    height: 170px;
+    height: 180px;
     flex-wrap: wrap;
 `
 
@@ -69,8 +79,9 @@ export const ProfilePhoto = styled.div`
     height: 120px;
     border-radius: 50%;
     border: 1px solid black;
-    margin: 22px;
-    margin-left: 50px;
+    margin-top: 40px;
+    margin-left: 60px;
+    margin-right: 10px;
 `
 
 export const ProfileIntro = styled.div`
@@ -83,16 +94,68 @@ export const ProfileIntro = styled.div`
 export const ProfileEmail = styled.div`
     width: 200px;
     height: 30px;
-    border: 1px solid black;
+    border-bottom: 1px solid black;
+    margin-top: 60px;
     color: #01402E;
-    margin-left: 10px;
-    margin-top: 40px;
 `
 
 export const ProfileMyInfo = styled.div`
-    width: 270px;
+    width: 300px;
+    height: 30px;
+    border-bottom: 1px solid black;
+    color: #01402E;
+    margin-bottom: 15px;
+`
+
+export const ReviewBox = styled.div`
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 100%;
+    height: 180px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    color: #01402E;
+`
+
+export const ReviewSquare = styled.div`
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid black; */
+    justify-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+`
+
+export const ReviewOne = styled.div`
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    justify-content: space-evenly;
+    text-align: center;
+`
+
+export const ReviewTitle = styled.div`
+    width: 130px;
     height: 30px;
     border: 1px solid black;
-    color: #01402E;
-    margin-left: 10px;
+    text-align: center;
+`
+
+export const PageFootBtnBox = styled.div`
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 250px;
+    height: 60px;
+    margin-top: 140px;
+    padding-left: 10px;
+`
+
+export const PageFootBtn = styled.button`
+    border: 1px solid black;
+    width: 110px;
+    height: 35px;
+    border-radius: 20px;
 `

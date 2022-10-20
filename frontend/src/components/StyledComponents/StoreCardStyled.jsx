@@ -4,12 +4,12 @@ export const CardBox = styled.div`
     display: grid;
     grid-template-rows: 1fr 1fr;
     width: 30vw;
-    height: 19vh;
+    height: 18vh;
     min-width: 430px;
     max-width: 450px;
-    border: 2px solid #40282C;
+    border: 1px solid #40282C;
     margin-bottom: 5px;
-    background-color: #f4f4f4;
+    background-color: whitesmoke;
     color: #523338;
 `
 

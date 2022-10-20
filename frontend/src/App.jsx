@@ -17,6 +17,8 @@ import UiErrorFallback from "./components/Common/UiErrorFallback";
 import LayOut from "./components/Common/Layout";
 import * as Api from "./utils/Api";
 import { loginReducer } from "./utils/reducer";
+import KakaoAuth from "./components/User/KakaoAuth";
+import NaverLogin from "./components/User/NaverLogin";
 
 export const UserStateContext = createContext(null);
 export const DispatchContext = createContext(null);
@@ -47,7 +49,7 @@ function App() {
     user: null,
   });
   const [isFetchCompleted, setIsFetchCompleted] = useState(false);
-  const [code, setCode] = useState("")
+  // const [code, setCode] = useState("")
 
   const fetchCurrentUser = async() => {
     try {
@@ -67,27 +69,41 @@ function App() {
   }
 
 
-  const Kakao = async (_code) => {
-      if (!_code) return;
-      const res = await Api.post("kakaoSignin", {code: _code});
-      console.log(res); 
-  };
+  // const kakaoRegister = async (_code) => {
+  //     if (!_code) return;
+  //     const res = await Api.post("kakaoSignin", {code: _code});
+  //     console.log(res); 
+  // };
 
-  const getSsoCode = () => {
-      const params = new URL(window.location.href).searchParams;
-      const _code = params.get("code");
-      if (!code) {
-          Kakao(_code);
-      }
-      setCode(_code);
-  }
+  // const getSourceCode = () => {
+  //     const params = new URL(window.location.href).searchParams;
+  //     const _code = params.get("code");
+  //     if (!code) {
+  //       kakaoRegister(_code);
+  //     }
+  //     setCode(_code);
+  // }
 
-  useEffect(()=> {
-      getSsoCode();
-  }, [])
+  // useEffect(()=> {
+  //   getSourceCode();
+  // }, [])
 
-  // 카카오 dispatch 해서 
+  // // 카카오 dispatch 해서 
+  // const kakaoLogin = async (e) => {
+  //   e.preventDefault();
 
+  //   const res = await Api.post("kakaoLogin", {code: _code});
+    
+  //   const kakaoUser = res.data;
+  //   const kakaoToken = kakaoUser.token;
+    
+  //   sessionStorage.setItem("userToken", kakaoToken);
+
+  //   dispatch({
+  //     type: "LOGIN",
+  //     payload: user,
+  //   })
+  // }
 
   // 이 다음에!!! useEffect 사용!!!
   useEffect(() => {
@@ -108,7 +124,11 @@ function App() {
         >
             <Router>
               <LayOut>
-                <Routes>{ setRoute() }</Routes>
+                <Routes>
+                  { setRoute() }
+                  <Route path="/login/oauth2/code/kakao" element={<KakaoAuth />} />
+                  {/* <Route path="/login/oauth2/code/naver" element={<NaverLogin />} /> */}
+                </Routes>
               </LayOut>
             </Router>
         </Suspense>

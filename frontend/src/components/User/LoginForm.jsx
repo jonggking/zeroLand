@@ -1,7 +1,7 @@
-import React, { useContext, useState, useCallback } from "react";
+import React, { useContext, useState, useCallback, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import * as LoginStyled from "../StyledComponents/SignStyled";
-import { KaKaoButton } from "./KakaoLogin";
+import { KaKaoButton } from "./OAuth";
 import NaverLogin from "./NaverLogin";
 import * as Api from "../../utils/Api";
 import { DispatchContext } from "../../App";
@@ -20,6 +20,7 @@ function LoginForm () {
 
     const [checkEamil, setCheckEmail] = useState(false);
     const [checkPwd, setCheckPwd] = useState(false);
+
 
     //이메일, 비밀번호 유효성 검사
     const validateEmail = (email) => {

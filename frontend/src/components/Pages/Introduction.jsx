@@ -4,6 +4,7 @@ import { Pagination } from "swiper";
 
 import 'swiper/css';
 import "swiper/css/pagination";
+import HorizentalChart from "../Introduction/HorizontalChart";
 
 const slideContentList = [
   // 1번
@@ -36,6 +37,7 @@ const slideContentList = [
   // 3번
   <div>
     <h2>왜 2030 소비자인가?</h2>
+    {/* <div id="root"><HorizentalChart /></div> */}
     <div>
     ZeroLand는 20대, 30대 소비자의 <b>환경관심정도</b>가 다른 연령대의 소비자들보다 낮다는 점에 주목했습니다.<br />
     <br />

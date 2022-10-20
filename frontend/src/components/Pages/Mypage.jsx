@@ -15,6 +15,7 @@ function Mypage() {
       <MyPageBox.PageFormBox>
         <MyPageBox.PageContainer>
           <MyPageBox.Menubox>
+            <MyPageBox.Menus>My Page</MyPageBox.Menus>
             <MyPageBox.Menus>Information</MyPageBox.Menus>
             <MyPageBox.Menus>Favorites</MyPageBox.Menus>
             <MyPageBox.Menus>My review</MyPageBox.Menus>
@@ -23,10 +24,28 @@ function Mypage() {
             <MyPageBox.ProfileBox>
               <MyPageBox.ProfilePhoto></MyPageBox.ProfilePhoto>
               <MyPageBox.ProfileIntro>
-                  <MyPageBox.ProfileEmail>이메일 주소 들어가는 칸</MyPageBox.ProfileEmail>
-                  <MyPageBox.ProfileMyInfo>내 소개 들어가는 칸</MyPageBox.ProfileMyInfo>
+                  <MyPageBox.ProfileEmail>메일칸 input 이런 걸로 수정 가능</MyPageBox.ProfileEmail>
+                  <MyPageBox.ProfileMyInfo>소개칸 크기 보라고 밑줄 쳤어요 수정 가능</MyPageBox.ProfileMyInfo>
               </MyPageBox.ProfileIntro>
             </MyPageBox.ProfileBox>
+            <MyPageBox.ReviewBox>
+              <MyPageBox.ReviewSquare>
+              <MyPageBox.ReviewOne>숫자</MyPageBox.ReviewOne>
+              <MyPageBox.ReviewTitle>관심 상점</MyPageBox.ReviewTitle>
+              </MyPageBox.ReviewSquare>
+              <MyPageBox.ReviewSquare>
+              <MyPageBox.ReviewOne>숫자</MyPageBox.ReviewOne>
+              <MyPageBox.ReviewTitle>관심 상점</MyPageBox.ReviewTitle>
+              </MyPageBox.ReviewSquare>
+              <MyPageBox.ReviewSquare>
+              <MyPageBox.ReviewOne>숫자</MyPageBox.ReviewOne>
+              <MyPageBox.ReviewTitle>관심 상점</MyPageBox.ReviewTitle>
+              </MyPageBox.ReviewSquare>
+            </MyPageBox.ReviewBox>
+            <MyPageBox.PageFootBtnBox>
+              <MyPageBox.PageFootBtn>비밀번호 변경</MyPageBox.PageFootBtn>
+              <MyPageBox.PageFootBtn>회원 탈퇴</MyPageBox.PageFootBtn>
+            </MyPageBox.PageFootBtnBox>
           </MyPageBox.ContentBox>
         </MyPageBox.PageContainer>
       </MyPageBox.PageFormBox>
