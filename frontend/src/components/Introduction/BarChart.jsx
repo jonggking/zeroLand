@@ -1,38 +1,72 @@
-// 막대 차트 그리는 코드
+import React from 'react';
+import { Bar } from 'react-chartjs-2';
 
-import { Doughnut } from "react-chartjs-2";
+function BarChart () {
+  var context = document
+  .getElementById('myChart')
+  .getContext('2d');
+  var myChart = new Chart(context, {
+  type: 'bar', // 차트의 형태
+  data: { // 차트에 들어갈 데이터
+      labels: [
+          //x 축
+          '1','2','3','4','5','6','7'
+      ],
+      datasets: [
+          { //데이터
+              label: 'test1', //차트 제목
+              data: [
+                  21,19,25,20,23,26,25 //x축 label에 대응되는 데이터 값
+              ],
+              backgroundColor: [
+                  //색상
+                  'rgba(255, 99, 132, 0.2)',
+                  'rgba(54, 162, 235, 0.2)',
+                  'rgba(255, 206, 86, 0.2)',
+                  'rgba(75, 192, 192, 0.2)',
+                  'rgba(153, 102, 255, 0.2)',
+                  'rgba(255, 159, 64, 0.2)'
+              ],
+              borderColor: [
+                  //경계선 색상
+                  'rgba(255, 99, 132, 1)',
+                  'rgba(54, 162, 235, 1)',
+                  'rgba(255, 206, 86, 1)',
+                  'rgba(75, 192, 192, 1)',
+                  'rgba(153, 102, 255, 1)',
+                  'rgba(255, 159, 64, 1)'
+              ],
+              borderWidth: 1 //경계선 굵기
+          }/* ,
+          {
+              label: 'test2',
+              fill: false,
+              data: [
+                  8, 34, 12, 24
+              ],
+              backgroundColor: 'rgb(157, 109, 12)',
+              borderColor: 'rgb(157, 109, 12)'
+          } */
+      ]
+  },
+  options: {
+      scales: {
+          yAxes: [
+              {
+                  ticks: {
+                      beginAtZero: true
+                  }
+              }
+          ]
+      }
+  }
+  });
+  
+  return (
+    <div style="width: 900px; height: 900px;">
+	    <canvas id="myChart"></canvas>
+    </div>
+  );
+};
 
-function testChart() {
-    const expData = {
-        labels: ["긍정적", "부정적", "보통"],
-        datasets: [
-            {
-            labels: ["긍정적", "부정적", "보통"],
-            data: [60, 13, 27],
-            borderWidth: 2,
-            hoverBorderWidth: 3,
-            backgroundColor: [
-                "rgba(238, 102, 121, 1)",
-                "rgba(98, 181, 229, 1)",
-                "rgba(255, 198, 0, 1)"
-            ],
-            fill: true
-            }
-        ]
-    };
-
-    return (
-        <Doughnut
-            options={{
-            legend: {
-                display: true,
-                position: "right"
-            }
-            }}
-            data={expData}
-            height={120}
-        />
-    );
-}
-
-export default testChart;
+export default BarChart;

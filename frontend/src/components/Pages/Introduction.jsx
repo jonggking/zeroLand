@@ -19,7 +19,6 @@ const slideContentList = [
       이렇게 늘어난 비대면 서비스의 규모만큼 사용되는 일회용품 역시 늘어났습니다. <br />
       코로나19 발생 이후 <b>버려지는 쓰레기의 양은 전년 대비 XX% 증가</b>하였습니다.
       </div>
-      <span><img style={{display: "block", margin: "auto"}}src="img/graph2.png" alt="그래프" /></span>
   </div>,
   // 2번
   <div>

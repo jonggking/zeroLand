@@ -1,14 +1,11 @@
-import React, {useState} from "react"
+import React from "react"
 import StarRate from "./StarRate.jsx"
 import * as StoreInfoCard from "../StyledComponents/StoreCardStyled";
 
-function StoreCard({
-    currentReview,
-    isEditable,
-    setIsEditing,
-    setReview,
-    store_Id,
-}) {
+function StoreCard({...props}) {
+    const {favStore}= props
+    console.log(favStore)
+
   return(
     <>
         <StoreInfoCard.CardBox>
