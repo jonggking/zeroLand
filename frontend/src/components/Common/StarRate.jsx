@@ -15,6 +15,7 @@ function StarRate({star}) {
             starVerScore -= 14;
         }
         tempStarRatesArr[idx] = starVerScore;
+        console.log(tempStarRatesArr)
         return tempStarRatesArr;
     };
     useEffect(() => {
@@ -22,6 +23,7 @@ function StarRate({star}) {
     }, [])
     return (
         <StarRateWrap>
+            <span style={{color:"red"}}>{star}</span>
             {STAR_IDX_ARR.map((item, idx) => {
                 return <span className='star_icon' style={{StarRateWrap}} key={`${item}_${idx}`}>
                     <svg xmlns='http://www.w3.org/2000/svg' width='20' height='19' viewBox='0 0 14 13' fill='#cacaca'>
