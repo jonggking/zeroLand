@@ -13,6 +13,7 @@ function Header () {
 
     const userState = useContext(UserStateContext);
     const dispatch = useContext(DispatchContext);
+    console.log(userState)
 
     const isLogin = !!userState.user;
 
@@ -22,6 +23,7 @@ function Header () {
         dispatch({ type: "LOGOUT" });
         navigate("/");
     } 
+
 
   return (
         <Navbar expand="lg">
