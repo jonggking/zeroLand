@@ -24,13 +24,15 @@ const NaverLogin = () => {
 
     const getNaverToken = async () => {
         if (!location.hash) return;
-        const token = window.location.hash.split('=')[1].split('&')[0];
+        const token = window.location.href.split('=')[1].split('&')[0];
         console.log(token);
 
         //api 쓸 곳
         await axios.post("naverOauth", {
             token
-         })
+         }, {
+            withCredentials: true
+        })
         .then((res) => {
             window.location.replace("/")
         })

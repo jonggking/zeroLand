@@ -148,7 +148,6 @@ export const LogoBox = styled.div`
     justify-content: space-around;
     
     .kakaologo {
-        height: 45px;
-        width: 45px;
+        height: 40px;
     }
 `

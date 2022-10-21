@@ -1,8 +1,6 @@
 import React, { useCallback, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import * as ResisterStyled from "../StyledComponents/SignStyled";
-// import NaverLogin from "./NaverLogin";
-// import { KaKaoButton } from "./OAuth";
 import CheckModal from "./CheckModal";
 import * as Api from "../../utils/Api";
 
@@ -221,12 +219,6 @@ function RegisterForm () {
         가입하기
           </ResisterStyled.FootButton>
         </ResisterStyled.FootBtnBox>
-
-        {/* <div style={{fontSize: "15px"}}>— 간편 로그인 —</div>
-        <ResisterStyled.LogoBox>
-          <NaverLogin /> 
-          <KaKaoButton />
-        </ResisterStyled.LogoBox> */}
 
         </ResisterStyled.InputBox>
     </ResisterStyled.FormBox>

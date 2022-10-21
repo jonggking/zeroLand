@@ -2,7 +2,7 @@ import React, { useContext, useState, useCallback, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import * as LoginStyled from "../StyledComponents/SignStyled";
 import { KaKaoButton } from "./OAuth";
-import NaverLogin from "./NaverLogin";
+// import NaverLogin from "./NaverLogin";
 import * as Api from "../../utils/Api";
 import { DispatchContext } from "../../App";
 
@@ -130,9 +130,9 @@ function LoginForm () {
                     </LoginStyled.FootButton></a>
                 </LoginStyled.FootBtnBox>
 
-                <div style={{fontSize: "15px"}}>— 간편 로그인 —</div>
+                <div style={{fontSize: "13px", marginTop: "10px" }}>카카오톡으로 로그인하기</div>
                 <LoginStyled.LogoBox>
-                  <NaverLogin /> 
+                  {/* <NaverLogin />  */}
                   <KaKaoButton />
                 </LoginStyled.LogoBox>
             </LoginStyled.LoginInputBox>

@@ -18,7 +18,6 @@ import LayOut from "./components/Common/Layout";
 import * as Api from "./utils/Api";
 import { loginReducer } from "./utils/reducer";
 import KakaoAuth from "./components/User/KakaoAuth";
-import NaverLogin from "./components/User/NaverLogin";
 
 export const UserStateContext = createContext(null);
 export const DispatchContext = createContext(null);
@@ -49,12 +48,16 @@ function App() {
     user: null,
   });
   const [isFetchCompleted, setIsFetchCompleted] = useState(false);
-  // const [code, setCode] = useState("")
+
+  useEffect(() => {
+    console.log(userState);
+  }, [userState])
 
   const fetchCurrentUser = async() => {
     try {
       const res = await Api.get("user");
       const currentUser = res.data;
+      console.log(currentUser);
 
       dispatch({
         type: "LOGIN",
@@ -67,43 +70,6 @@ function App() {
     // fetch 과정이 끝났으므로
     setIsFetchCompleted(true);
   }
-
-
-  // const kakaoRegister = async (_code) => {
-  //     if (!_code) return;
-  //     const res = await Api.post("kakaoSignin", {code: _code});
-  //     console.log(res); 
-  // };
-
-  // const getSourceCode = () => {
-  //     const params = new URL(window.location.href).searchParams;
-  //     const _code = params.get("code");
-  //     if (!code) {
-  //       kakaoRegister(_code);
-  //     }
-  //     setCode(_code);
-  // }
-
-  // useEffect(()=> {
-  //   getSourceCode();
-  // }, [])
-
-  // // 카카오 dispatch 해서 
-  // const kakaoLogin = async (e) => {
-  //   e.preventDefault();
-
-  //   const res = await Api.post("kakaoLogin", {code: _code});
-    
-  //   const kakaoUser = res.data;
-  //   const kakaoToken = kakaoUser.token;
-    
-  //   sessionStorage.setItem("userToken", kakaoToken);
-
-  //   dispatch({
-  //     type: "LOGIN",
-  //     payload: user,
-  //   })
-  // }
 
   // 이 다음에!!! useEffect 사용!!!
   useEffect(() => {
@@ -127,7 +93,6 @@ function App() {
                 <Routes>
                   { setRoute() }
                   <Route path="/login/oauth2/code/kakao" element={<KakaoAuth />} />
-                  {/* <Route path="/login/oauth2/code/naver" element={<NaverLogin />} /> */}
                 </Routes>
               </LayOut>
             </Router>
