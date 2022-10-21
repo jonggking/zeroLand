@@ -15,7 +15,7 @@ import { ErrorBoundary } from "react-error-boundary";
 import UiErrorFallback from "./components/Common/UiErrorFallback";
 
 import LayOut from "./components/Common/LayOut";
-import * as api from "./utils/Api";
+import * as Api from "./utils/Api";
 import { loginReducer } from "./utils/reducer";
 import KakaoAuth from "./components/User/KakaoAuth";
 

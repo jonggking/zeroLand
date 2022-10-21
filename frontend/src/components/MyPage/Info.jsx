@@ -150,7 +150,6 @@ function Info() {
             </a>
           </p>
         </div>
-      </div>
     </>
   );
 }

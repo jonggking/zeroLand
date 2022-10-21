@@ -41,6 +41,7 @@ function StorePage ({
   useEffect(() => {
     getReviews();
   }, []) // 해당 가게 전체 리뷰 불러오기
+  console.log(currentUser);
 
   return (
     <Card className="mb-4">
