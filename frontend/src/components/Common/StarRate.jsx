@@ -24,9 +24,9 @@ function StarRate({star}) {
         <StarRateWrap>
             {STAR_IDX_ARR.map((item, idx) => {
                 return <span className='star_icon' style={{StarRateWrap}} key={`${item}_${idx}`}>
-                    <svg xmlns='http://www.w3.org/2000/svg' width='20' height='19' viewBox='0 0 14 13' fill='#cacaca'>
+                    <svg xmlns='http://www.w3.org/2000/svg' width='16' height='15' viewBox='0 0 14 15' fill='#cacaca'>
                         <clipPath id={`${item}StarClip`}>
-                            <rect width={`${ratesResArr[idx]}`} height='20' />
+                            <rect width={`${ratesResArr[idx]}`} height='15' />
                         </clipPath>
                         <path
                             id={`${item}Star`}

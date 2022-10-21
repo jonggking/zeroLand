@@ -37,9 +37,10 @@ const slideContentList = [
     </div>
   </div>,
   // 3번
-  <div>
-    <h2>왜 2030 소비자인가?</h2>
     <div>
+    <h2>왜 2030 소비자인가?</h2>
+    <div className="bar-chart"><BarChart /></div>
+    <div className="discription">
     ZeroLand는 20대, 30대 소비자의 <b>환경관심정도</b>가 다른 연령대의 소비자들보다 낮다는 점에 주목했습니다.<br />
     <br />
     근소한 차이라고도 볼 수 있지만, 친환경에 대한 관심을 촉구하는 것은 계속해서 환경을 사용해야 하는 젊은 세대에게 무엇보다 중요합니다.<br />

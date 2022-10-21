@@ -7,6 +7,7 @@ import ChangeInfo from "../MyPage/ChangeInfo.jsx";
 import ChangePassword from "../MyPage/ChangePassword.jsx";
 import Withdrawal from "../MyPage/Withdrawal.jsx"
 import * as Api from "../../utils/Api";
+import * as MyPageBox from "../StyledComponents/MyPageStyled";
 
 const navMenuList = [
   { label: "Info", path: "info" },
@@ -119,31 +120,62 @@ function Mypage() {
     console.log(info);
   }, [info]);
 
-  return (
-    <MyPageContext.Provider value={contextValue}>
-      <div className="container py-2">
-        {/* <article id="main" class="w-auto h-1">
-            <header>
-              <h2>ZEROLAND / 서비스 소개</h2>
-            </header>
-          </article> */}
-        <div className="row mx-4 mt-4">
-          <nav className="fs-4 text-end ps-0 nav flex-column col-3 justify-content-left bg-secondary bg-gradient">
-          {navMenuList.map((nav, index) => (
-            <div
-              key={`${nav.path}-${index}`}
-              className={navMenuClassStyle}
-              onClick={() => changeMenu(nav.path)}
-            >
-              {nav.label}
-            </div>
-          ))}
-          </nav>
-          <div className="col-9 bg-light">{mapPathToComp[menu]()}</div>
-        </div>
+    return (    
+        <div className="container py-2">
+          <div className="row mx-4 mt-4">
+            <nav className="fs-4 text-end ps-0 nav flex-column col-3 justify-content-left bg-secondary bg-gradient">
+                <a className="fst-italic py-4 nav-link active text-white border border-secondary" aria-current="page" href="#" onClick={()=>{setMenu(<Info />)}}>Info</a>
+                <a className="py-4 nav-link text-white border border-secondary" href="#" onClick={()=>{setMenu(<Reward />)}}>Reward</a>
+                <a className="py-4 nav-link text-white border border-secondary" href="#" onClick={()=>{setMenu(<MyFav />)}}>Fav</a>
+                <a className="py-4 nav-link text-white border border-secondary" href="#" onClick={()=>{setMenu(<MyReview />)}}>My Review</a>
+            </nav>
+            <div className="col-9 bg-light">
+              {menu}  
+            </div>   
       </div>
-    </MyPageContext.Provider>
+    </div>
   );
 }
 
 export default Mypage;
+
+
+// <>
+// <MyPageBox.PageFormBox>
+//   <MyPageBox.PageContainer>
+//     <MyPageBox.Menubox>
+//       <MyPageBox.Menus>My Page</MyPageBox.Menus>
+//       <MyPageBox.Menus>Information</MyPageBox.Menus>
+//       <MyPageBox.Menus>Favorites</MyPageBox.Menus>
+//       <MyPageBox.Menus>My review</MyPageBox.Menus>
+//     </MyPageBox.Menubox>
+//     <MyPageBox.ContentBox>
+//       <MyPageBox.ProfileBox>
+//         <MyPageBox.ProfilePhoto></MyPageBox.ProfilePhoto>
+//         <MyPageBox.ProfileIntro>
+//             <MyPageBox.ProfileEmail>메일칸 input 이런 걸로 수정 가능</MyPageBox.ProfileEmail>
+//             <MyPageBox.ProfileMyInfo>소개칸 크기 보라고 밑줄 쳤어요 수정 가능</MyPageBox.ProfileMyInfo>
+//         </MyPageBox.ProfileIntro>
+//       </MyPageBox.ProfileBox>
+//       <MyPageBox.ReviewBox>
+//         <MyPageBox.ReviewSquare>
+//         <MyPageBox.ReviewOne>숫자</MyPageBox.ReviewOne>
+//         <MyPageBox.ReviewTitle>관심 상점</MyPageBox.ReviewTitle>
+//         </MyPageBox.ReviewSquare>
+//         <MyPageBox.ReviewSquare>
+//         <MyPageBox.ReviewOne>숫자</MyPageBox.ReviewOne>
+//         <MyPageBox.ReviewTitle>관심 상점</MyPageBox.ReviewTitle>
+//         </MyPageBox.ReviewSquare>
+//         <MyPageBox.ReviewSquare>
+//         <MyPageBox.ReviewOne>숫자</MyPageBox.ReviewOne>
+//         <MyPageBox.ReviewTitle>관심 상점</MyPageBox.ReviewTitle>
+//         </MyPageBox.ReviewSquare>
+//       </MyPageBox.ReviewBox>
+//       <MyPageBox.PageFootBtnBox>
+//         <MyPageBox.PageFootBtn>비밀번호 변경</MyPageBox.PageFootBtn>
+//         <MyPageBox.PageFootBtn>회원 탈퇴</MyPageBox.PageFootBtn>
+//       </MyPageBox.PageFootBtnBox>
+//     </MyPageBox.ContentBox>
+//   </MyPageBox.PageContainer>
+// </MyPageBox.PageFormBox>
+// </>
